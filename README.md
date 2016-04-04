@@ -2,7 +2,7 @@
 This repository is about using C Programming to read water flow sensor (model part YF-S201C or model YF-S201) data with embedded Linux board. The tested hardware for this source code is Artik 10 from Samsung. I also wrote a tutorial about how to use water flow sensor to work with Artik 10, you can view the tutorial, [here](https://www.hackster.io/aaronkow/read-water-flow-sensor-using-artik-10-with-c-programming-578436).
 
 ## Who Should Follow this Tutorial
-Any person who wanted to try out the water flow sensor with model part YF-S201C or model YF-S201 with C programming for their embedded Linux board. If you have try out the water flow sensor with my code, please kindly feedback me with the result, so I can improve it. Thanks!
+Any person who wanted to try out the water flow sensor with model part YF-S201C or model YF-S201 with C programming for their embedded Linux board. ***If you have try out the water flow sensor with my code, please kindly feedback me with the result, so I can improve it***. Thanks!
 
 ## Prerequisite
 As long as your machine is an embedded Linux board and able to compile C program file, it is okay. To compile the C program file, you need a compiler called "GCC compiler" from [GNU](https://gcc.gnu.org).
