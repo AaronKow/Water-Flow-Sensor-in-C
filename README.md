@@ -41,3 +41,6 @@ Flow rate: 0.000000 L/min; Current Liquid Flowing: 0 ml/sec; Output Liquid Quant
 ```
 
 **Please note that, you must press "ENTER" to stop this program. Because this will successfully unexport your reference pin for the next execution.**
+
+## License
+The license of this project is under MIT License, see the LICENSE for more information.
