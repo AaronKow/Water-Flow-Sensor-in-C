@@ -18,7 +18,7 @@ calibration_factor = 5.0;		// change the factor to suit your board
 Please note that, you need to tells the compiler to link with the pthread library, which purpose for compilation for threads. You can do it as below:
 
 ```sh
-$ gcc -o water_flow main.c water_flow.c interrupt.c
+$ gcc main.c water_flow.c interrupt.c -o water_flow -lpthread
 ```
 
 In the execution file, it requires an argument. The argument represent the GPIO pin of your embedded device that connect the signal pin of the water flow sensor. During execution, you need to follow this command:
