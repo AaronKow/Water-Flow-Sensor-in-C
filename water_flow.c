@@ -58,6 +58,7 @@ void *get_water_sensor(void *arguments){
       		printf("Flow rate: %f L/min; Current Liquid Flowing: %d ml/sec; Output Liquid Quantity: %lu ml\n", flow_rate, ml, ml_total);
       		pulse_count = 0; 														// Reset Counter
 		}
+		usleep(100);
 	}
 	pthread_exit(NULL);
 	return NULL;
@@ -86,23 +87,23 @@ void *interrupt_func(void *arguments){
 
 		fdset[0].fd = STDIN_FILENO;
 		fdset[0].events = POLLIN;
-      
+
 		fdset[1].fd = gpio_fd;
 		fdset[1].events = POLLPRI;
 
-		rc = poll(fdset, nfds, timeout);      
+		rc = poll(fdset, nfds, timeout);
 
 		if (rc < 0) {															// if poll is unsuccessful, stop thread
 			printf("\npoll() failed!\n");
-			
+
 			pthread_exit(NULL);
 			return NULL;
 		}
-      
+
 		if (rc == 0) {															// if poll returns 0 then call timed out, loop again in this case
 			printf("Responding ...\n");
 		}
-            
+
 		if (fdset[1].revents & POLLPRI) {
 			len = read(fdset[1].fd, buf, MAX_BUF);
 			flow();
